@@ -4,7 +4,7 @@
 
 #### 16 Feb 2018 `ICLR2018`
 
---
+---
 
 ### Concept
 
@@ -18,7 +18,7 @@ Woops started rambling...
 
 Will rewrite this later.
 
---
+---
 
 ### Notes
 
@@ -26,7 +26,7 @@ Will rewrite this later.
 - Requires a ton of predictions to generate a single adversarial image
 - Generated adversarial sample seems to be unable to give high confidence since we travel along the decision boundary
 
---
+---
 
 ### Ideas
 
@@ -35,7 +35,7 @@ Will rewrite this later.
 - What if instead of changing all the pixels in the image, we change a random subset of pixels? Is there a good way to pick the subset? Can we also do this for other attacks?
 - Can we hide adversarial information in a channel?
 
---
+---
 
 ### PS
 

@@ -36,3 +36,9 @@ The memory matrix here contains the neuron-specific gradient information that ca
 
 - This would be similar to Vinyals et. al's work where each training/test sample is encoded based on the context of the entire training set + test sample; it might be possible to instead use attention in two forms - self-attention for encoding each training sample and encoding each test sample by attending to the training set
 - As with the abovementioned algorithms, scaling and transiting from few-shot to big data might be unelegant
+
+---
+
+### PS
+
+My reproduced implementation [here](https://github.com/greentfrapp/cond-shift-neurons) in Tensorflow.

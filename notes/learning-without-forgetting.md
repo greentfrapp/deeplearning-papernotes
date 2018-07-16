@@ -27,16 +27,19 @@ Following the cosine-similarity-based classifier, the "weights" for a new class 
 
 ### Notes
 
-- It is not clear whether it is entirely fair to compare against other metalearning algorithms when the training process is rather different. In this case, the authors' algorithm is trained on all 64 classes as base categories, whereas typical metalearning algorithms are trained on all 64 classes across several N-way k-shot training episodes. On one hand, the training set is identical. On the other hand, one can't help but feel that the being able to see the entire training dataset offers an unfair advantage.
+- It is not clear whether it is entirely fair to compare against other metalearning algorithms when the training process is rather different. In this case, the authors' algorithm is trained on all 64 classes as base categories, whereas typical metalearning algorithms are trained on all 64 classes across several N-way k-shot training episodes. On one hand, the training set is identical. On the other hand, one can't help but feel that being able to see the entire training dataset offers an unfair advantage.
+- Because we use cosine-similarity, each "weight vector" for a particular class corresponds to the "anchor vector" for the class (borrowing the term from Prototypical Networks by Snell et al. ([2017](https://arxiv.org/abs/1703.05175))). In other words, the weight vector can be seen as the average feature vector for that class, such that samples from that class align best with this representation, hence achieving optimal classification results.
 
 ---
 
 ### Ideas
 
-- Why can't we just use dot-product-based classification? Given a new 5-way task, we calculate the weight vectors for each class and only use the weight-vectors from the 5 classes to calculate the final logit layer.
+
 
 ---
 
 ### PS
 
 The authors have an implementation [here](https://github.com/gidariss/FewShotWithoutForgetting)
+
+This idea also follows concurrent work by Qi et al. ([2017](https://arxiv.org/pdf/1712.07136)).
